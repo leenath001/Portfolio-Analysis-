@@ -1,5 +1,5 @@
 # Portfolio-Analysis-
-Simulates portfolio performance using historical data and Geometric Brownian Motion (GBM) assumption
+Simulates portfolio performance using historical data and Geometric Brownian Motion (GBM) assumption. See Portfolio_Ex for example of use case
 
 Master_Data_Entry.xlsx
 *  Use https://www.nasdaq.com/market-activity/quotes/historical for data entry. Ensure time period is 1y. Sheet is formatted such that you can copy/paste data directly from download to sheet.
