@@ -45,3 +45,23 @@ def asset_sim(iter,days,S0,paths,sheet):
     
     return prices, mu, sig
 
+def prob_tool(type,K,prices,paths):
+    
+    count = 0
+    sum = 0
+    
+    if type == 1:
+        for p in prices:
+            if p >= K:
+                count += 1
+        prob = count/paths
+        return print(f"{prob:.2%}", "trade is ITM.") 
+    elif type == 2:
+        for p in prices:
+            if p <= K:
+                count += 1
+        prob = count/paths
+        return rint(f"{prob:.2%}", "trade is ITM.")
+
+    
+
