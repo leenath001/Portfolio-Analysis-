@@ -8,10 +8,14 @@ Simulates portfolio performance using historical data and Geometric Brownian Mot
 (2) MC_funcs.asset_sim(iter,days,allocation,paths,sheet)
 *  iter : No. of GBM iterations wanted through specified time period.
 *  days : No. of days.
-*  allocation : Amt. allocated to specific asset
+*  allocation : Amt. ($) allocated to specific asset
 *  paths : No. of simulations wanted. Reccomended 5000+
 
 Output: 
 *  asset_sim[0] : array (size = paths) of possible prices for asset
 *  asset_sim[1] : estimated drift (mu)
 *  asset_sim[2] : estimated vol (sig)
+
+Portfolio_Ex:
+*  Example using (2) to simulate movements of AAPL, MSFT, NVDA over 200 days
+*  Script gives average portfolio price and plots potential returns
