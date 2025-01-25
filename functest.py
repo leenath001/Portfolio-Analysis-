@@ -7,7 +7,7 @@ iter = 1000
 days = 5
 paths = 5000
 
-x = Analysis_funcs.portfolio_analysis(iter,days,paths,["NVDA", "AAPL"],[50,25])
+x = Analysis_funcs.portfolio_analysis(iter,days,paths,["NVDA", "AAPL"],[25,50])
 port = x[0]
 initsum = x[1]
 print(x[2])
