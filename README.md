@@ -21,5 +21,5 @@ Output:
 *  asset_sim[2] : estimated vol (sig)
 
 Portfolio_Ex:
-*  Example using (2) to simulate movements of AAPL, MSFT, NVDA over 200 days
+*  Example using (2) to simulate movements of AAPL, MSFT, NVDA over 100 days
 *  Script gives average portfolio price and plots potential returns
