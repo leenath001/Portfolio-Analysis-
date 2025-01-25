@@ -40,4 +40,4 @@ Output:
 *    portfolio_analysis[4] : growth % (based on average)
   
 functest.py
-*  Example using (4) to simulate movements of AAPL, NVDA over 5 days
+*  Example using (4) to simulate movements of AAPL, NVDA over 5 days. Portfolio allocates 50 to AAPL, 25 to NVDA. 
