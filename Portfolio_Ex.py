@@ -50,7 +50,7 @@ print('Average Value: $',form_b(mean))
 print('Growth: ',pgrowth)
 print()
 
-# P[Profit], simple call/put analysis
+# P[portfolio > or < strike]
 count = 0
 sum = 0
 
