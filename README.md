@@ -1,11 +1,12 @@
 # Portfolio-Analysis-
-Simulates portfolio performance using historical data and Geometric Brownian Motion assumption
+Simulates portfolio performance using historical data and Geometric Brownian Motion (GBM) assumption
 
 (1) Param_Est.Param_Est(sheet)
 *  File takes excel sheet as input and returns estimated drift (mu) and volatility (sig). Uses Parkinson volatility Estimator
 *  Columns MUST be named 'dS/S' and 'ln(H/L)' for script to work
 
 (2) MC_funcs.asset_sim(iter,days,allocation,paths,sheet)
+*  File uses GBM to run (paths) monte-carlo simulations over specified days. See Output
 *  iter : No. of GBM iterations wanted through specified time period.
 *  days : No. of days.
 *  allocation : Amt. ($) allocated to specific asset
