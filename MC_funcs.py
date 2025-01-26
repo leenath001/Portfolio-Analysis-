@@ -67,6 +67,6 @@ def FI_sim(aloc,rate,days,paths):
     
     import numpy
     
-    y = (aloc * (rate)**(days/252))*numpy.ones(paths)
+    y = (aloc * (1 + rate)**(days/252))*numpy.ones(paths)
     
     return y
