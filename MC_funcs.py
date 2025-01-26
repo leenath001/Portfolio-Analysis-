@@ -61,7 +61,12 @@ def prob_tool(type,K,prices,paths):
             if p <= K:
                 count += 1
         prob = count/paths
-        return rint(f"{prob:.2%}", "trade is ITM.")
-
+        return print(f"{prob:.2%}", "trade is ITM.")
+        
+def FI_sim(aloc,rate,days,paths):
     
-
+    import numpy
+    
+    y = (aloc * (rate)**(days/252))*numpy.ones(paths)
+    
+    return y
