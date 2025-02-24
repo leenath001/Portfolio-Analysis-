@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 import seaborn
 
 iter = 500
-days = 30
+days = 5
 paths = 50000
 
-tick = ["VOO","TSPA"]
-alo = [250,400]
+tick = ["AAPL", "NVDA", "GOOG", "META"]
+alo = [200,200,200,200]
 
 x = Analysis_funcs.portfolio_analysis(iter,days,paths,tick,alo)
 port = x[0]
