@@ -5,10 +5,10 @@ Suppose that you have a portfolio consisting of AAPL, NVDA, GOOG, and META with 
 
 (1) Master_Data_Entry.xlsx
 *  To ensure accurate security simulation, we use historical data to glean estimates for return and volatility. Use https://www.nasdaq.com/market-activity/quotes/historical for data entry. Ensure time period is 1y. Sheet is formatted such that you can copy/paste data directly from download to sheet. Check last row to ensure data is correct. You may have to remove the last row. 
-*  Columns MUST be named 'dS/S' and 'ln(H/L)' for script to work. Columns highlighted red indicate do not touch - sheet automatically performs calculations to be read by script. 
+*  Columns MUST be named 'dS/S' and 'ln(H/L)' for script to work. Columns highlighted red indicate do not touch - sheet automatically performs calculations to be read by script. (working to add yfinance functionality)
 
 (2) Utilization of tool
-*  Load Analysis_funcs and MC_funcs to your sheet. To ensure our excel shet reader works, load .xlsx files into a folder named Data. I reccomend creating a seperate folder [1] altogether for this tool, and then creating another folder within [1] titled Data. The .xlsx reader reads sheets within Data\[ticker] (for instance, references 'Data\NVDA')
+*  Load Analysis_funcs and MC_funcs to your sheet. To ensure our excel reader works, load .xlsx files into a folder named Data. I reccomend creating a seperate folder [1] altogether for this tool, and then creating another folder within [1] titled Data. The .xlsx reader reads sheets within Data/[ticker] (for instance, references 'Data/NVDA')
 *  Specify the number of discretizations (iter), length of time period (days), and number of MC simulations (paths). Also, specify the tickers and allocations to each
 *  Sheets should ideally be named the ticker, and allocations should be indexed in the same place as tickers (for instance, tickers = ["AAPL","NVDA","GOOG","META"], alo = [200,200,200,200])
 
