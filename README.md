@@ -33,3 +33,5 @@ Use histogram plotting tools to visualize portolio returns! Over short periods o
   
 functest.py
 *  Example using (3) to simulate movements of AAPL, NVDA, GOOG, META over 5 days. Portfolio allocates 200 to each. 
+
+Working to implement yahoo finance API such that (1) is unnecessary 
