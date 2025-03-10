@@ -1,7 +1,7 @@
 # Portfolio-Analysis-
-Simulates portfolio performance using historical data and Geometric Brownian Motion (GBM) assumption. See functest.py for example of use case
+Simulates portfolio performance using historical data and Geometric Brownian Motion (GBM) assumption. See main.py for example of use case
 
-Suppose that you have a portfolio consisting of AAPL, NVDA, GOOG, and META with 200 allocated to each, and you'd like to estimate your expected return for the week. This tool uses the GBM assumption and runs Monte-Carlo simulations to present the user with a distribution of returns.
+Suppose that you have a portfolio consisting of AAPL, NVDA with 400 allocated to Apple and 200 allocated to Nvidia. You'd like to estimate your expected return for the week. This tool uses the GBM assumption and runs Monte-Carlo simulations to present the user with a distribution of returns.
 
 (1) Master_Data_Entry.xlsx
 *  To ensure accurate security simulation, we use historical data to glean estimates for return and volatility. Use https://www.nasdaq.com/market-activity/quotes/historical for data entry. Ensure time period is 1y. Sheet is formatted such that you can copy/paste data directly from download to sheet. Check last row to ensure data is correct. You may have to remove the last row. 
