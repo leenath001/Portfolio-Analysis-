@@ -1,4 +1,4 @@
-def portfolio_analysis(iter,days,paths,tickers,alo):
+def portfolio_analysis(iter,days,paths,tickers,alo,start,end):
     
     import MC_funcs
     import numpy
@@ -12,14 +12,16 @@ def portfolio_analysis(iter,days,paths,tickers,alo):
 # parameters and asset allocation
     initsum = sum(alo)
     port = numpy.zeros(paths)
-
+    
     for ind1,names in enumerate(tickers):
         alocs = alo[ind1]
-        source = "Data/{}.xlsx".format(names)
+        #source = "Portfolio Analysis/Data/{}.xlsx".format(names)
         paramstr = "{} params :".format(names)
-        sim = MC_funcs.asset_sim(iter,days,alocs,paths,source)
+        sim = MC_funcs.asset_sim(iter,days,alocs,paths,names,start,end)
         params = [form_p(sim[1]),form_p(sim[2])]
+        print()
         print(paramstr, params)
+        print()
         port += sim[0]
 
     minimum = form_b(min(port))
