@@ -1,18 +1,28 @@
-def Param_Est(sheet):
+def Param_Est(ticker,start,end):
 
+    import Data_Funcs as df
     import pandas as pd
     import numpy as np
 
-# data import/indexing
-    data = pd.read_excel(sheet)
-    cols = ['dS/S','ln(H/L)']
-    paramestdat = data[cols]
+    # mu 
+    data = df.equity_data(ticker,start,end)
+    close = data.loc[:,'Close']
+    close = np.array([close])
+    dS = np.diff(close,axis =1)
+    extra = 0
+    dS = np.append(dS,0)
+    dS = dS[:,np.newaxis]
+    x = dS/close
+    mu = np.sum(x)
 
-# parameter estimation
-    dS_S = paramestdat['dS/S']
-    ln_HL = paramestdat['ln(H/L)']
-
-    mu = sum(dS_S)
-    vol = np.sqrt(252)*np.sqrt((sum(ln_HL))/(1008*np.log(2)))
+    # vol 
+    H = data.loc[:,'High']
+    L = data.loc[:,'Low']
+    HLvec = np.log(H/L)**2
+    volsum = np.sum(HLvec)
+    volsumaj = np.array(volsum)
+    volsumaj = volsumaj[0]
+    denom = 4*len(HLvec)*np.log(2)
+    vol = np.sqrt(volsumaj/denom)**.5
 
     return mu, vol
