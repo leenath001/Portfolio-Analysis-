@@ -1,16 +1,18 @@
+import warnings
+warnings.filterwarnings("ignore")
 import Analysis_funcs
 import MC_funcs
 import matplotlib.pyplot as plt
 import seaborn
 
 iter = 500
-days = 5
+days = 7
 paths = 20000
 
-tick = ["AAPL","NVDA"]
-alo = [400,200]
+tick = ["AAPL","NVDA","SPY"]
+alo = [400,200,1000]
 
-x = Analysis_funcs.portfolio_analysis(iter,days,paths,tick,alo)
+x = Analysis_funcs.portfolio_analysis(iter,days,paths,tick,alo,'2024-03-01','2025-03-01')
 port = x[0]
 initsum = x[1]
 print()
@@ -23,7 +25,8 @@ print()
 print(x[5])
 print()
 
-MC_funcs.prob_tool(1,300,port,paths)
+MC_funcs.prob_tool(1,1650,port,paths)
+print()
 
 
 plt.figure()
@@ -35,3 +38,4 @@ plt.ylabel('Density')
 #plt.axvline(x = 85, color = 'red')
 plt.title('Price Distribution')
 plt.show()
+
