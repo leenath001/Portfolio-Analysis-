@@ -29,7 +29,7 @@ Suppose that you have a portfolio consisting of AAPL, NVDA, and SPY with 400 all
 Use histogram plotting tools to visualize portolio returns! Over short periods of time, density appears normal. Over longer periods, density represents log-normal behavior. 
 *  Note that this model does not account for jumps, new information, etc... Using model over for extended periods of time is not reccomended and can provide inaccurate data.  
   
-functest.py
+main.py
 *  Example using (2) to simulate movements of AAPL, NVDA, SPY over 7 days. Total allocation of 1600. 
 
 
