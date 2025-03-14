@@ -23,6 +23,7 @@ def Param_Est(ticker,start,end):
     volsumaj = np.array(volsum)
     volsumaj = volsumaj[0]
     denom = 4*len(HLvec)*np.log(2)
-    vol = np.sqrt(volsumaj/denom)**.5
+    v = volsumaj/denom
+    vol = np.sqrt(v/len(HLvec))
 
     return mu, vol
