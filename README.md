@@ -6,7 +6,7 @@ Suppose that you have a portfolio consisting of AAPL, NVDA, and SPY with 400 all
 (1) Utilization of tool
 *  Load Analysis_funcs and MC_funcs to your sheet.
 *  Specify the number of discretizations (iter), length of time period (days), and number of MC simulations (paths). Also, specify the tickers and allocations to each
-*  Sheets should ideally be named the ticker, and allocations should be indexed in the same place as tickers (for instance, tickers = ["AAPL","NVDA","SPY"], alo = [400,200,1000])
+*  Create an array of tickers and one for allocations. Amount should be indexed in the same place as tickers (for instance, tickers = ["AAPL","NVDA","SPY"], alo = [400,200,1000])
 *  Specify a start and end date for the historical data (format 'yyyy - mm - dd' as a string). Function Param_Est plugs tickers, start, and end date into yfinance API to estimate mu (% return) and drift (% STD) over the specified period.
 *  Parkinson volatility estimator 
 
