@@ -6,13 +6,13 @@ import matplotlib.pyplot as plt
 import seaborn
 
 iter = 500
-days = 7
+days = 31
 paths = 20000
 
 tick = ["AAPL","NVDA","SPY"]
 alo = [400,200,1000]
 
-x = Analysis_funcs.portfolio_analysis(iter,days,paths,tick,alo,'2024-03-01','2025-03-01')
+x = Analysis_funcs.portfolio_analysis(iter,days,paths,tick,alo,30)
 port = x[0]
 initsum = x[1]
 print()
