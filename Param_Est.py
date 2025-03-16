@@ -1,11 +1,11 @@
-def Param_Est(ticker,start,end):
+def Param_Est(ticker,period):
 
     import Data_Funcs as df
     import pandas as pd
     import numpy as np
 
     # mu 
-    data = df.equity_data(ticker,start,end)
+    data = df.equity_data(ticker,period)
     close = data.loc[:,'Close']
     close = np.array([close])
     dS = np.diff(close,axis =1)
