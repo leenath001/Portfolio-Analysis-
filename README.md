@@ -1,7 +1,7 @@
 # Portfolio-Analysis-
 Simulates portfolio performance using historical data and Geometric Brownian Motion (GBM) assumption. See main.py for example of use case
 
-Suppose that you have a portfolio consisting of AAPL, NVDA, and SPY with 400 allocated to Apple, 200 allocated to Nvidia, and 1000 allocated to SPY. You'd like to estimate your expected return for the week using historical data. This tool uses the GBM assumption and runs Monte-Carlo simulations to present the user with a distribution of returns.
+Suppose that you have a portfolio consisting of AAPL, NVDA, and SPY with 400 allocated to Apple, 200 allocated to Nvidia, and 1000 allocated to SPY. You'd like to estimate your expected return for the week using 30-day drift and volatility . This tool uses the GBM assumption and runs Monte-Carlo simulations to present the user with a distribution of returns.
 
 (1) Utilization of tool
 *  Load Analysis_funcs, Data_Funcs, and MC_funcs to your sheet.
