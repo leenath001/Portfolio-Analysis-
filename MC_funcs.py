@@ -1,4 +1,4 @@
-def asset_sim(iter,days,S0,paths,ticker,start,end):
+def asset_sim(iter,days,S0,paths,ticker,period):
 
     import pandas
     import numpy
@@ -11,7 +11,7 @@ def asset_sim(iter,days,S0,paths,ticker,start,end):
 #########################
 
 # input data into sheet, use function to estimate parameters
-    params = Param_Est.Param_Est(ticker,start,end)
+    params = Param_Est.Param_Est(ticker,period)
 
     mu = params[0]
     sig = params[1]
