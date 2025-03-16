@@ -1,4 +1,4 @@
-def portfolio_analysis(iter,days,paths,tickers,alo,start,end):
+def portfolio_analysis(iter,days,paths,tickers,alo,period):
     
     import MC_funcs
     import numpy
@@ -17,7 +17,7 @@ def portfolio_analysis(iter,days,paths,tickers,alo,start,end):
         alocs = alo[ind1]
         #source = "Portfolio Analysis/Data/{}.xlsx".format(names)
         paramstr = "{} params :".format(names)
-        sim = MC_funcs.asset_sim(iter,days,alocs,paths,names,start,end)
+        sim = MC_funcs.asset_sim(iter,days,alocs,paths,names,period)
         params = [form_p(sim[1]),form_p(sim[2])]
         print()
         print(paramstr, params)
