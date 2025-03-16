@@ -4,10 +4,10 @@ Simulates portfolio performance using historical data and Geometric Brownian Mot
 Suppose that you have a portfolio consisting of AAPL, NVDA, and SPY with 400 allocated to Apple, 200 allocated to Nvidia, and 1000 allocated to SPY. You'd like to estimate your expected return for the week using historical data. This tool uses the GBM assumption and runs Monte-Carlo simulations to present the user with a distribution of returns.
 
 (1) Utilization of tool
-*  Load Analysis_funcs and MC_funcs to your sheet.
+*  Load Analysis_funcs, Data_Funcs, and MC_funcs to your sheet.
 *  Specify the number of discretizations (iter), length of time period (days), and number of MC simulations (paths). Also, specify the tickers and allocations to each
 *  Create an array of tickers and one for allocations. Amount should be indexed in the same place as tickers (for instance, tickers = ["AAPL","NVDA","SPY"], alo = [400,200,1000])
-*  Specify a start and end date for the historical data (format 'yyyy - mm - dd' as a string). Function Param_Est plugs tickers, start, and end date into yfinance API to estimate mu (% return) and drift (% STD) over the specified period.
+*  Specify a period to grab historical data. Function Param_Est plugs tickers and period into yfinance API to estimate mu (% return) and drift (% STD) over the specified period.
 *  Parkinson volatility estimator 
 
 (2) Load parameters into Analysis_funcs.portfolio_analysis(iter,days,paths,tickers,alo,start,finish)
