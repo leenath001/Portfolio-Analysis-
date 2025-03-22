@@ -22,8 +22,8 @@ def Param_Est(ticker,period):
     volsum = np.sum(HLvec)
     volsumaj = np.array(volsum)
     volsumaj = volsumaj[0]
-    denom = 4*len(HLvec)*np.log(2)
+    denom = 4*period*np.log(2)
     v = volsumaj/denom
-    vol = np.sqrt(v/len(HLvec))
+    vol = np.sqrt(v)
 
     return mu, vol
